@@ -115,7 +115,7 @@ public class AgregarLibro extends javax.swing.JFrame {
 
         jLabel_AnnoPublicacionLibro.setBackground(new java.awt.Color(35, 35, 35));
         jLabel_AnnoPublicacionLibro.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
-        jLabel_AnnoPublicacionLibro.setText("Año de publicacion");
+        jLabel_AnnoPublicacionLibro.setText("Fecha de publicacion");
         jPanel1.add(jLabel_AnnoPublicacionLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, -1, -1));
 
         txt_ISBN.addKeyListener(new java.awt.event.KeyAdapter() {

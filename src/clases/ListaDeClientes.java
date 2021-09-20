@@ -33,7 +33,7 @@ public class ListaDeClientes extends javax.swing.JFrame {
 
         try {
             Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_libreria", "root", "");
-            PreparedStatement pst = cn.prepareStatement("select NombreCliente, ApellidoCliente, Ciudad, FechaNacimiento, DNI from clientes");
+            PreparedStatement pst = cn.prepareStatement("select NombreCliente, ApellidoCliente, CiudadCliente, FechaNacimientoCliente, DNI from clientes");
 
             ResultSet rs = pst.executeQuery();
 

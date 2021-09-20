@@ -42,7 +42,7 @@ public class InformacionLibros extends javax.swing.JFrame {
                 txt_NombreLibro.setText(rs.getString("NombreLibro"));
                 txt_AutorLibro.setText(rs.getString("Autor"));
                 txt_Genero.setText(rs.getString("Genero"));
-                txt_AnnoPublicacionLibro.setText(rs.getString("AnnoPublicacion"));
+                txt_AnnoPublicacionLibro.setText(rs.getString("AnnoDePublicacion"));
                 txt_ISBN.setText(rs.getString("ISBN"));
                 txt_Precio.setText(rs.getString("Precio"));
 
@@ -120,7 +120,7 @@ public class InformacionLibros extends javax.swing.JFrame {
 
         jLabel_AnnoPublicacionLibro.setBackground(new java.awt.Color(35, 35, 35));
         jLabel_AnnoPublicacionLibro.setFont(new java.awt.Font("Arial", 1, 13)); // NOI18N
-        jLabel_AnnoPublicacionLibro.setText("Año de publicacion");
+        jLabel_AnnoPublicacionLibro.setText("Fecha de publicacion");
         jPanel1.add(jLabel_AnnoPublicacionLibro, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, -1, -1));
         jPanel1.add(txt_ISBN, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 150, 30));
 

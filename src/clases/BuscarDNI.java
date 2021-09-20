@@ -88,8 +88,8 @@ public class BuscarDNI extends javax.swing.JFrame {
             if (rs.next()) {
                 informacionClientes.txt_NombreCliente.setText(rs.getString("NombreCliente"));
                 informacionClientes.txt_ApellidoCliente.setText(rs.getString("ApellidoCliente"));
-                informacionClientes.txt_CiudadCliente.setText(rs.getString("Ciudad"));
-                informacionClientes.txt_FechaNacimientoCliente.setText(rs.getString("FechaNacimiento"));
+                informacionClientes.txt_CiudadCliente.setText(rs.getString("CiudadCliente"));
+                informacionClientes.txt_FechaNacimientoCliente.setText(rs.getString("FechaNacimientoCliente"));
                 informacionClientes.txt_DNI.setText(rs.getString("DNI"));
 
                 informacionClientes.setVisible(true);

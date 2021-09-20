@@ -90,7 +90,7 @@ public class BuscarISBN extends javax.swing.JFrame {
                 informacionLibros.txt_NombreLibro.setText(rs.getString("NombreLibro"));
                 informacionLibros.txt_AutorLibro.setText(rs.getString("Autor"));
                 informacionLibros.txt_Genero.setText(rs.getString("Genero"));
-                informacionLibros.txt_AnnoPublicacionLibro.setText(rs.getString("AnnoPublicacion"));
+                informacionLibros.txt_AnnoPublicacionLibro.setText(rs.getString("AnnoDePublicacion"));
                 informacionLibros.txt_ISBN.setText(rs.getString("ISBN"));
                 informacionLibros.txt_Precio.setText(rs.getString("Precio"));
 

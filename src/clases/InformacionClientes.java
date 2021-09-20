@@ -43,8 +43,8 @@ public class InformacionClientes extends javax.swing.JFrame {
 
                 txt_NombreCliente.setText(rs.getString("NombreCliente"));
                 txt_ApellidoCliente.setText(rs.getString("ApellidoCliente"));
-                txt_CiudadCliente.setText(rs.getString("Ciudad"));
-                txt_FechaNacimientoCliente.setText(rs.getString("FechaNacimiento"));
+                txt_CiudadCliente.setText(rs.getString("CiudadCliente"));
+                txt_FechaNacimientoCliente.setText(rs.getString("FechaNacimientoCliente"));
                 txt_DNI.setText(rs.getString("DNI"));
 
             }
@@ -212,7 +212,7 @@ public class InformacionClientes extends javax.swing.JFrame {
 
                 ResultSet rs = pst2.executeQuery();
 
-                PreparedStatement pst1 = cn.prepareStatement("update clientes set NombreCliente = ?, ApellidoCliente = ?, Ciudad = ?, FechaNacimiento = ?, DNI = ? where DNI = '" + entero_ID + "'");
+                PreparedStatement pst1 = cn.prepareStatement("update clientes set NombreCliente = ?, ApellidoCliente = ?, CiudadCliente = ?, FechaNacimientoCliente = ?, DNI = ? where DNI = '" + entero_ID + "'");
 
                 pst1.setString(1, txt_NombreCliente.getText().trim());
                 pst1.setString(2, txt_ApellidoCliente.getText().trim());
