@@ -79,7 +79,7 @@ public class BuscarISBN extends javax.swing.JFrame {
         InformacionLibros informacionLibros = new InformacionLibros();
 
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_libreria", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/libreria", "root", "");
 
             PreparedStatement pst = cn.prepareStatement("select * from libros where ISBN = ?");
             pst.setString(1, txt_BuscarLibro.getText().trim());

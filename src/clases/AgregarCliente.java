@@ -191,7 +191,7 @@ public class AgregarCliente extends javax.swing.JFrame {
 
             } else {
                 try {
-                    Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_libreria", "root", "");
+                    Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/libreria", "root", "");
                     PreparedStatement pst = cn.prepareStatement("insert into clientes values(?,?,?,?,?)");
 
                     pst.setString(1, nombre);

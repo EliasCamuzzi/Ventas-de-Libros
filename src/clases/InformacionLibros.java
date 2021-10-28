@@ -32,7 +32,7 @@ public class InformacionLibros extends javax.swing.JFrame {
         txt_ISBN.setEnabled(false);
 
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_libreria", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/libreria", "root", "");
             PreparedStatement pst = cn.prepareStatement("select * from libros where NombreLibro = '" + nombreDelLibro + "'");
             ResultSet rs = pst.executeQuery();
 
@@ -221,7 +221,7 @@ public class InformacionLibros extends javax.swing.JFrame {
                 int entero_isbn = Integer.parseInt(isbn);
                 int entero_ID = Integer.parseInt(ID);
 
-                Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_libreria", "root", "");
+                Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/libreria", "root", "");
                 PreparedStatement pst2 = cn.prepareStatement("select ISBN from libros where ISBN = '" + entero_isbn + "' and not ISBN = '" + entero_ID + "'");
 
                 ResultSet rs = pst2.executeQuery();
@@ -263,7 +263,7 @@ public class InformacionLibros extends javax.swing.JFrame {
             int entero_isbn = Integer.parseInt(isbn);
             int entero_ID = Integer.parseInt(ID);
 
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_libreria", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/libreria", "root", "");
             PreparedStatement pst2 = cn.prepareStatement("select ISBN from libros where ISBN = '" + entero_isbn + "' and not ISBN = '" + entero_ID + "'");
 
             ResultSet rs = pst2.executeQuery();

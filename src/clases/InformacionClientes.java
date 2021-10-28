@@ -34,7 +34,7 @@ public class InformacionClientes extends javax.swing.JFrame {
         txt_DNI.setEnabled(false);
 
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_libreria", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/libreria", "root", "");
             PreparedStatement pst = cn.prepareStatement("select * from clientes where NombreCliente = '" + userUpdate1 + "'");
             ResultSet rs = pst.executeQuery();
 
@@ -207,7 +207,7 @@ public class InformacionClientes extends javax.swing.JFrame {
                 int entero_dni = Integer.parseInt(dni);
                 int entero_ID = Integer.parseInt(ID);
 
-                Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_libreria", "root", "");
+                Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/libreria", "root", "");
                 PreparedStatement pst2 = cn.prepareStatement("select DNI from clientes where DNI = '" + entero_dni + "' and not DNI = '" + entero_ID + "'");
 
                 ResultSet rs = pst2.executeQuery();
@@ -247,7 +247,7 @@ public class InformacionClientes extends javax.swing.JFrame {
             int entero_dni = Integer.parseInt(dni);
             int entero_ID = Integer.parseInt(ID);
 
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_libreria", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/libreria", "root", "");
             PreparedStatement pst2 = cn.prepareStatement("select DNI from clientes where DNI = '" + entero_dni + "' and not DNI = '" + entero_ID + "'");
 
             ResultSet rs = pst2.executeQuery();

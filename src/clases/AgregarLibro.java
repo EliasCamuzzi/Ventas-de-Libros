@@ -17,7 +17,7 @@ public class AgregarLibro extends javax.swing.JFrame {
         initComponents();
         setSize(555, 400);
         setResizable(false);
-        setTitle("  Agregar cliente");
+        setTitle("  Agregar libro");
         this.setLocationRelativeTo(null);
 
         txt_NombreLibro.setToolTipText("Ej: El señor de los anillos - La comunidad del anillo");
@@ -174,7 +174,7 @@ public class AgregarLibro extends javax.swing.JFrame {
         precio = txt_PrecioLibro.getText().trim();
         ISBN = txt_ISBN.getText().trim();
 
-        if (ISBN.length() > 10) {
+        if (ISBN.length() > 13) {
             JOptionPane.showMessageDialog(this, "Numero ISBN superior al permitido.");
 
         } else {
@@ -208,7 +208,7 @@ public class AgregarLibro extends javax.swing.JFrame {
 
             } else {
                 try {
-                    Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_libreria", "root", "");
+                    Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/libreria", "root", "");
                     PreparedStatement pst = cn.prepareStatement("insert into libros values(?,?,?,?,?,?)");
 
                     pst.setString(1, nombre);
@@ -271,7 +271,7 @@ public class AgregarLibro extends javax.swing.JFrame {
             if (validacionCampo != evt.VK_BACK_SPACE) {
                 evt.consume();
 
-                JOptionPane.showMessageDialog(rootPane, "Asegurese de ingresar solo numeros en el DNI");
+                JOptionPane.showMessageDialog(rootPane, "Asegurese de ingresar solo numeros en el ISBN");
                 
             }
         }

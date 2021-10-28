@@ -78,7 +78,7 @@ public class BuscarDNI extends javax.swing.JFrame {
         InformacionClientes informacionClientes = new InformacionClientes();
 
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_libreria", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/libreria", "root", "");
 
             PreparedStatement pst = cn.prepareStatement("select * from clientes where DNI = ?");
             pst.setString(1, txt_BuscarCliente.getText().trim());

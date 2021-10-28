@@ -32,7 +32,7 @@ public class ListaDeLibros extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
 
         try {
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/db_libreria", "root", "");
+            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/libreria", "root", "");
             PreparedStatement pst = cn.prepareStatement("select NombreLibro, Autor, Genero, AnnoDePublicacion, ISBN, Precio from libros");
 
             ResultSet rs = pst.executeQuery();
